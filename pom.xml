@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.yuanwj.test-starter</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>test-starter</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
+    <name>test-starter</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
