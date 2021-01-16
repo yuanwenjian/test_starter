@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.yuanwj.teststarter.config.H2EmbeddedDatabase
