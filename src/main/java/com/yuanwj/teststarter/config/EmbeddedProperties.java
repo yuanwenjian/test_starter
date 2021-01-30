@@ -1,6 +1,7 @@
 package com.yuanwj.teststarter.config;
 
 import lombok.Data;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -12,6 +13,7 @@ import java.util.stream.Stream;
  * @date: 2021/01/03 17:43
  **/
 @Data
+@ConfigurationProperties(prefix = "embedded.enabled")
 public class EmbeddedProperties {
     public final String url = "jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MYSQL";
 
