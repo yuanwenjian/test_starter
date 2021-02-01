@@ -12,6 +12,7 @@ import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabase;
+import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseConfigurer;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory;
 import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
 
@@ -49,7 +50,7 @@ public class H2EmbeddedDatabase {
 
     public EmbeddedDatabase embeddedDataSource(EmbeddedProperties embeddedProperties, SqlFormat sqlFormat) {
         final EmbeddedDatabaseFactory embeddedDatabaseFactory = new EmbeddedDatabaseFactory();
-        final EmbeddedConfiguration embeddedConfiguration = new EmbeddedConfiguration(embeddedProperties.getUrl(),
+        final EmbeddedDatabaseConfigurer embeddedConfiguration = new EmbeddedConfiguration(embeddedProperties.getUrl(),
                 embeddedProperties.getUserName(), embeddedProperties.getPassword());
         embeddedDatabaseFactory.setDatabaseConfigurer(embeddedConfiguration);
         ResourceDatabasePopulator populator = new ResourceDatabasePopulator();

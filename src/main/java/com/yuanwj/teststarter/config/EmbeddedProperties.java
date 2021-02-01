@@ -17,9 +17,9 @@ import java.util.stream.Stream;
 public class EmbeddedProperties {
     public final String url = "jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MYSQL";
 
-    public final String userName = "sa";
+    public final String userName = "app1";
 
-    public final String password = "sa";
+    public final String password = "";
 
     public final String driverClassName = "org.h2.Driver";
 

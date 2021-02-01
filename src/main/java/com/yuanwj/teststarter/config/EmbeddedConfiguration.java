@@ -50,6 +50,7 @@ public class EmbeddedConfiguration implements EmbeddedDatabaseConfigurer {
             }
 
         } catch (SQLException throwables) {
+            log.warn("H2数据库关闭......");
             log.warn("数据库关闭异常");
         } finally {
             if (connection != null) {
