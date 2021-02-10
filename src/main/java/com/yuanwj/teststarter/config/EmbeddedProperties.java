@@ -25,7 +25,7 @@ public class EmbeddedProperties {
 
     public final String initPath = "";
 
-    private final List<String> scanPaths = Stream.of("./db/mysql").collect(Collectors.toList());
+    private final List<String> scanPaths = Stream.of("../db/mysql").collect(Collectors.toList());
 
     private final String initSql = "";
 

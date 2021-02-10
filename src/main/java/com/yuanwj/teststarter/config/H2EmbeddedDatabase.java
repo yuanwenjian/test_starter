@@ -37,7 +37,7 @@ public class H2EmbeddedDatabase {
     public static volatile EmbeddedDatabase embeddedDatabase;
 
     @Bean(value = "dataSource")
-    @ConditionalOnProperty(name = "spring.datasource.master.url", havingValue = "false", matchIfMissing = true)
+    @ConditionalOnProperty(name = "spring.datasource.url", havingValue = "false", matchIfMissing = true)
     public DataSource etDatasource(EmbeddedProperties embeddedProperties, SqlFormat sqlFormat) {
         if (embeddedDatabase == null) {
             synchronized (this) {
